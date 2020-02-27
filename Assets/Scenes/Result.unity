@@ -823,7 +823,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u30BF\u30A4\u30C8\u30EB\u306B\u623B\u308B"
+  m_Text: Back to title
 --- !u!222 &1759370666
 CanvasRenderer:
   m_ObjectHideFlags: 0
