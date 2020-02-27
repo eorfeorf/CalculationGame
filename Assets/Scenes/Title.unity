@@ -542,7 +542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a63dd9566c48d344ba0381320e77229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: Main
+  sceneName: Main
 --- !u!4 &858656538
 Transform:
   m_ObjectHideFlags: 0
@@ -708,7 +708,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u30BF\u30A4\u30C8\u30EB"
+  m_Text: Calculation.
 --- !u!222 &1152421837
 CanvasRenderer:
   m_ObjectHideFlags: 0
