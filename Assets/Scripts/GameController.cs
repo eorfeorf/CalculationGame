@@ -12,10 +12,13 @@ public class GameController : MonoBehaviour
     private Questioner questioner = default;
     [SerializeField]
     private int NumberOfQuestions = 0;
+    [SerializeField]
+    private ToScene toScene = default;
 
     private void Awake()
     {
         checker.OnAfterChecking += OnAfterChecking;
+        
     }
 
     private void OnAfterChecking(bool isCorrect)
@@ -37,6 +40,7 @@ public class GameController : MonoBehaviour
             // TODO:終了処理.
             // 終了.
             Debug.Log("終わり！");
+            toScene.Translate();
         }
         else
         {
