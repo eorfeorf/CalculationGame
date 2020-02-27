@@ -583,6 +583,7 @@ MonoBehaviour:
   checker: {fileID: 1647917393}
   respondent: {fileID: 484609540}
   questioner: {fileID: 881005916}
+  NumberOfQuestions: 10
 --- !u!4 &559832071
 Transform:
   m_ObjectHideFlags: 0
@@ -730,7 +731,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 331665964}
   checker: {fileID: 1647917393}
-  NumberOfQuestions: 10
 --- !u!224 &881005917
 RectTransform:
   m_ObjectHideFlags: 0

@@ -9,10 +9,6 @@ public class Questioner : MonoBehaviour
     private Text text = default;
     [SerializeField]
     private Checker checker = default;
-    [SerializeField]
-    private int NumberOfQuestions = 0;
-
-    public int QuestionNum => NumberOfQuestions;
 
     private QuestionGenerator generator = null;
 

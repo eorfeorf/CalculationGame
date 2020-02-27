@@ -10,6 +10,8 @@ public class GameController : MonoBehaviour
     private Respondent respondent = default;
     [SerializeField]
     private Questioner questioner = default;
+    [SerializeField]
+    private int NumberOfQuestions = 0;
 
     private void Awake()
     {
@@ -20,7 +22,7 @@ public class GameController : MonoBehaviour
     {
         if(isCorrect)
         {
-            Correct(respondent.CorrectCount == questioner.QuestionNum);
+            Correct(respondent.CorrectCount == NumberOfQuestions);
         }
         else
         {
@@ -40,7 +42,8 @@ public class GameController : MonoBehaviour
         {
             // TODO:次の問題.
             // 次の問題へ.
-            Debug.Log("次！");
+            Debug.Log("正解！次！");
+            questioner.Open();
         }
     }
 
@@ -48,6 +51,7 @@ public class GameController : MonoBehaviour
     {
         // TODO:次の問題.
         // 次の問題へ.
-        Debug.Log("次！");
+        Debug.Log("不正解！次！");
+        questioner.Open();
     }
 }
