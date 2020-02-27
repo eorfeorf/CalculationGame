@@ -13,7 +13,7 @@ public class Checker : MonoBehaviour
     public void IsCorrect(string input)
     {
         // 未記入.
-        if (input.Equals(""))
+        if(string.IsNullOrEmpty(input))
             return;
 
         // 数字じゃない.
