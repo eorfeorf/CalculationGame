@@ -14,11 +14,18 @@ public class GameController : MonoBehaviour
     private int NumberOfQuestions = 0;
     [SerializeField]
     private ToScene toScene = default;
+    [SerializeField]
+    private Timer timer = default;
 
     private void Awake()
     {
         checker.OnAfterChecking += OnAfterChecking;
         
+    }
+
+    private void Start()
+    {
+        timer.Begin();
     }
 
     private void OnAfterChecking(bool isCorrect)
@@ -40,6 +47,7 @@ public class GameController : MonoBehaviour
             // TODO:終了処理.
             // 終了.
             Debug.Log("終わり！");
+            timer.End();
             toScene.Translate();
         }
         else
