@@ -5,11 +5,23 @@ using UnityEngine;
 
 public class Checker : MonoBehaviour
 {
+    [SerializeField]
+    private AudioClip correctAudioSource;
+    [SerializeField]
+    private AudioClip incorrectAudioSource;
+
     public Question Question { get; set; }
     public Action OnEmpty { get; set; }
     public Action OnCorrect { get; set; }
     public Action OnIncorrect { get; set; }
     public Action<bool> OnAfterChecking;
+
+    private AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     public void IsCorrect(string input)
     {
@@ -32,6 +44,8 @@ public class Checker : MonoBehaviour
             // 正解
             Debug.Log("Correct!");
             OnCorrect.Invoke();
+
+            audioSource.clip = correctAudioSource;
         }
         else
         {
@@ -39,7 +53,11 @@ public class Checker : MonoBehaviour
             // 不正解
             Debug.Log("Incorrect...");
             OnIncorrect.Invoke();
+
+            audioSource.clip = incorrectAudioSource;
         }
+
+        audioSource.Play();
 
         OnAfterChecking.Invoke(IsCorrect);
     }
